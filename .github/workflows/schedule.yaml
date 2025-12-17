@@ -1,14 +1,12 @@
-name : 定时任务
+name: 定时任务
 
 on:
   schedule:
-  - cron : '*/2 * * * *'
-  
+    - cron: '*/2 * * * *'  # 每两分钟执行一次
+
 jobs:
   job_1:
-    runs-on : ubuntu-latest
-    steps :
-      - name : echo date
-        run : echo 'date:${date}'
-
-  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo current date
+        run: echo "date: $(date)"
